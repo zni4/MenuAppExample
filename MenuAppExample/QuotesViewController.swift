@@ -12,9 +12,25 @@ class QuotesViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        currentQuoteIndex = 0
     }
     
+    func updateQuote() {
+        textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
+    }
+
+    
+    @IBOutlet var textLabel: NSTextField!
+    
+    let quotes = Quote.all
+    
+    var currentQuoteIndex: Int = 0 {
+        didSet {
+            updateQuote()
+        }
+    }
+
+
 }
 
 extension QuotesViewController {
@@ -31,3 +47,21 @@ extension QuotesViewController {
         return viewcontroller
     }
 }
+
+// Actions
+
+extension QuotesViewController {
+    @IBAction func previous(_ sender: NSButton) {
+        currentQuoteIndex = (currentQuoteIndex - 1 + quotes.count) % quotes.count
+    }
+    
+    @IBAction func next(_ sender: NSButton) {
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.count
+    }
+    
+    @IBAction func quit(_ sender: NSButton) {
+        NSApplication.shared.terminate(sender)
+    }
+
+}
+
