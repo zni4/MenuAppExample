@@ -17,6 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(printQuote(_:))
+            
+            constructMenu()
+
         }
 
     }
@@ -30,6 +33,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let quoteAuthor = "Mark Twain"
         
         print("\(quoteText) — \(quoteAuthor)")
+    }
+
+    func constructMenu() {
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Print Quote", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Quit Quotes", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItem.menu = menu
     }
 
 }
