@@ -696,7 +696,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="previous:" target="XfG-lQ-9wD" id="6OD-0o-LTQ"/>
+                                    <action selector="previous:" target="XfG-lQ-9wD" id="NcO-lu-17E"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y80-HR-kTD">
@@ -730,6 +730,17 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eg-rq-Gag">
+                                <rect key="frame" x="393" y="13" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Test" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="03n-uG-lQ4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="tXC-p9-gbr" kind="popover" popoverAnchorView="1eg-rq-Gag" popoverBehavior="t" preferredEdge="maxY" id="A3K-HJ-XwV"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -740,8 +751,58 @@
             </objects>
             <point key="canvasLocation" x="75" y="592.5"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="V6g-lg-sNE">
+            <objects>
+                <viewController id="tXC-p9-gbr" customClass="TestViewController" customModule="MenuAppExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="IZA-n3-VXr">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uHk-bg-UuN">
+                                <rect key="frame" x="36" y="0.0" width="128" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close Popover" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y19-3x-oMB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closePopover:" target="tXC-p9-gbr" id="MMw-th-Edv"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhw-xK-Rrq">
+                                <rect key="frame" x="146" y="33" width="40" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAdvanced" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wAa-ct-h5S">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="changeLabel:" target="tXC-p9-gbr" id="QeD-mh-nzI"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-NU-bC4">
+                                <rect key="frame" x="19" y="44" width="127" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="TEST POPOVER" id="ymO-qg-aXZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="SFk-NU-bC4" id="H1R-r2-8bg"/>
+                    </connections>
+                </viewController>
+                <customObject id="E9N-Qr-vkb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="592"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
     </resources>
