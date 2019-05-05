@@ -14,6 +14,7 @@
 		4F73F81C2271CEE000F69B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F73F81A2271CEE000F69B46 /* Main.storyboard */; };
 		4F73F82B2271D6C000F69B46 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73F82A2271D6C000F69B46 /* QuotesViewController.swift */; };
 		4F73F82D2271DA5500F69B46 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73F82C2271DA5500F69B46 /* Quote.swift */; };
+		4F8C8E24227F5FCF0070D179 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C8E23227F5FCF0070D179 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4F73F81E2271CEE000F69B46 /* MenuAppExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MenuAppExample.entitlements; sourceTree = "<group>"; };
 		4F73F82A2271D6C000F69B46 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		4F73F82C2271DA5500F69B46 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		4F8C8E23227F5FCF0070D179 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4F73F82A2271D6C000F69B46 /* QuotesViewController.swift */,
 				4F73F82C2271DA5500F69B46 /* Quote.swift */,
 				4F312FC222772DB600DC3F8B /* TestViewController.swift */,
+				4F8C8E23227F5FCF0070D179 /* Global.swift */,
 			);
 			path = MenuAppExample;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				4F312FC322772DB600DC3F8B /* TestViewController.swift in Sources */,
 				4F73F82D2271DA5500F69B46 /* Quote.swift in Sources */,
+				4F8C8E24227F5FCF0070D179 /* Global.swift in Sources */,
 				4F73F8172271CEE000F69B46 /* ViewController.swift in Sources */,
 				4F73F82B2271D6C000F69B46 /* QuotesViewController.swift in Sources */,
 				4F73F8152271CEE000F69B46 /* AppDelegate.swift in Sources */,

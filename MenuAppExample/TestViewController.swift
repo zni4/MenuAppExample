@@ -27,14 +27,14 @@ extension TestViewController {
     
     @IBAction func changeLabel(_ sender: NSButton) {
         
-        let osxMode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+        globalVariables.sharedManager.osxMode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
         
-        if testLabel.stringValue == "Cambio" {
+        if (testLabel.stringValue == "Claro" || testLabel.stringValue == "Oscuro") {
             testLabel.stringValue = "TEST POPOVER"
             testLabel.textColor = NSColor(deviceRed: 0, green: 0, blue: 0, alpha: 100)
             testLabel.font = NSFont(name: testLabel.font!.fontName, size: 12)
         } else {
-            if osxMode == "Light" {
+            if globalVariables.sharedManager.osxMode == "Light" {
                 testLabel.stringValue = "Claro"
                 testLabel.textColor = NSColor(deviceRed: 255, green: 0, blue: 0, alpha: 100)
                 testLabel.font = NSFont(name: testLabel.font!.fontName, size: 18)
