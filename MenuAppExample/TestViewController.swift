@@ -34,11 +34,12 @@ extension TestViewController {
             testLabel.textColor = NSColor(deviceRed: 0, green: 0, blue: 0, alpha: 100)
             testLabel.font = NSFont(name: testLabel.font!.fontName, size: 12)
         } else {
-            testLabel.stringValue = "Cambio"
             if osxMode == "Light" {
-                testLabel.textColor = NSColor(deviceRed: 255, green: 255, blue: 0, alpha: 100)
-                testLabel.font = NSFont(name: testLabel.font!.fontName, size: 8)
+                testLabel.stringValue = "Claro"
+                testLabel.textColor = NSColor(deviceRed: 255, green: 0, blue: 0, alpha: 100)
+                testLabel.font = NSFont(name: testLabel.font!.fontName, size: 18)
             } else {
+                testLabel.stringValue = "Oscuro"
                 testLabel.textColor = NSColor(deviceRed: 0, green: 0, blue: 255, alpha: 100)
                 testLabel.font = NSFont(name: testLabel.font!.fontName, size: 18)
             }
