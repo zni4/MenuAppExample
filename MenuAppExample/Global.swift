@@ -11,6 +11,7 @@ import Foundation
 
 class globalVariables {
     public var osxMode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+    public var varTest = 2
     
     class var sharedManager: globalVariables {
         struct Static {

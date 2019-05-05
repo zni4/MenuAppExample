@@ -28,6 +28,11 @@ extension TestViewController {
     @IBAction func changeLabel(_ sender: NSButton) {
         
         globalVariables.sharedManager.osxMode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+        print(globalVariables.sharedManager.varTest)
+        
+        globalVariables.sharedManager.varTest = 3
+        
+        print(globalVariables.sharedManager.varTest)
         
         if (testLabel.stringValue == "Claro" || testLabel.stringValue == "Oscuro") {
             testLabel.stringValue = "TEST POPOVER"
