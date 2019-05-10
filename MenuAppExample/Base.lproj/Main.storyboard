@@ -790,9 +790,21 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKM-BV-Yaz">
+                                <rect key="frame" x="36" y="62" width="93" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Claro &gt;&gt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U9T-Hx-ovw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cambioModo:" target="tXC-p9-gbr" id="bp9-A3-RLY"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="botonCambio" destination="jKM-BV-Yaz" id="2Cg-VZ-2Jw"/>
                         <outlet property="testLabel" destination="SFk-NU-bC4" id="H1R-r2-8bg"/>
                     </connections>
                 </viewController>

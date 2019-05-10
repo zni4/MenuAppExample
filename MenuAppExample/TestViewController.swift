@@ -12,9 +12,18 @@ class TestViewController: NSViewController {
     
     @IBOutlet weak var testLabel: NSTextField! //Asociamos la etiqueta a su nombre
     
+    @IBOutlet var botonCambio: NSButton! //Asociamos el boton a su nombre
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        globalVariables.sharedManager.osxMode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+        
+        if globalVariables.sharedManager.osxMode == "Light" {
+            botonCambio.title = "Oscuro"
+        } else {
+            botonCambio.title = "Claro"
+        }
     }
     
 }
@@ -51,5 +60,20 @@ extension TestViewController {
             }
         }
         
+    }
+    
+    @IBAction func cambioModo(_ sender: NSButton) {
+        //Pasamos de modo Oscuro a Claro y viceversa
+        if botonCambio.title == "Oscuro" {
+            botonCambio.title = "Claro"
+        } else {
+            botonCambio.title = "Oscuro"
+        }
+        
+        let proc = Process()
+        proc.launchPath = "/usr/bin/env"
+        proc.arguments = ["/usr/bin/osascript", "/Users/ignacio/INZ/Desarrollo Mac/MenuAppExample/MenuAppExample/ScriptDarkMode.scpt"]
+        proc.launch()
+        proc.waitUntilExit()
     }
 }
