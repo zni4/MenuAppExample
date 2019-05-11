@@ -72,7 +72,10 @@ extension TestViewController {
         
         let proc = Process()
         proc.launchPath = "/usr/bin/env"
-        proc.arguments = ["/usr/bin/osascript", "/Users/ignacio/INZ/Desarrollo Mac/MenuAppExample/MenuAppExample/ScriptDarkMode.scpt"]
+        
+        let stringPath = Bundle.main.path(forResource: "ScriptDarkMode", ofType: "scpt")
+            
+        proc.arguments = ["/usr/bin/osascript", stringPath] as! [String]
         proc.launch()
         proc.waitUntilExit()
     }
