@@ -680,10 +680,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Quotes View Controller-->
+        <!--QUOTES-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="QuotesViewController" id="XfG-lQ-9wD" customClass="QuotesViewController" customModule="MenuAppExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="QUOTES" storyboardIdentifier="QuotesViewController" id="XfG-lQ-9wD" customClass="QuotesViewController" customModule="MenuAppExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -738,7 +738,18 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="tXC-p9-gbr" kind="popover" popoverAnchorView="1eg-rq-Gag" popoverBehavior="t" preferredEdge="maxY" id="A3K-HJ-XwV"/>
+                                    <action selector="closeMainWindow:" target="XfG-lQ-9wD" id="0WP-um-1j5"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xid-FT-xsr">
+                                <rect key="frame" x="17" y="13" width="75" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="25E-6b-XGw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeCurrentWith_sender:" target="XfG-lQ-9wD" id="Exc-n8-Ssw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -751,10 +762,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="592.5"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Pantalla TEST-->
         <scene sceneID="V6g-lg-sNE">
             <objects>
-                <viewController id="tXC-p9-gbr" customClass="TestViewController" customModule="MenuAppExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pantalla TEST" storyboardIdentifier="TestViewController" id="tXC-p9-gbr" customClass="TestViewController" customModule="MenuAppExample" sceneMemberID="viewController">
                     <view key="view" id="IZA-n3-VXr">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -63,5 +63,23 @@ extension QuotesViewController {
         NSApplication.shared.terminate(sender)
     }
 
+    @IBAction func closeMainWindow(_ sender: NSButton) { //Cierra la ventana principal
+       self.view.window!.close()
+        
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        let identifier = NSStoryboard.SceneIdentifier("TestViewController")
+        guard let viewController = storyboard.instantiateController(withIdentifier: identifier) as? TestViewController else {
+            fatalError("Error no aparece TestViewController")
+        }
+        
+        let myWindow = NSWindow(contentViewController: viewController)
+        let controller = NSWindowController(window: myWindow)
+        
+        controller.showWindow(self)
+    }
+    
+    @IBAction func closeCurrent (_sender: NSButton) { //Cierra la ventana actual
+        self.view.window!.close()
+    }
 }
 

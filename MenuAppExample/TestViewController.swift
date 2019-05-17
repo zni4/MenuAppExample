@@ -31,7 +31,20 @@ class TestViewController: NSViewController {
 // Actions
 extension TestViewController {
     @IBAction func closePopover(_ sender: NSButton) {
-        dismiss(self)
+        
+        self.view.window!.close() //Cierra la ventana actual
+        
+        //Abre la ventana Quotes
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        let identifier = NSStoryboard.SceneIdentifier("QuotesViewController")
+        guard let viewController = storyboard.instantiateController(withIdentifier: identifier) as? QuotesViewController else {
+            fatalError("Error no aparece QuotesViewController")
+        }
+        
+        let myWindow = NSWindow(contentViewController: viewController)
+        let controller = NSWindowController(window: myWindow)
+        
+        controller.showWindow(self)
     }
     
     @IBAction func changeLabel(_ sender: NSButton) {
